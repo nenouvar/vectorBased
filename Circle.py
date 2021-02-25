@@ -1,3 +1,4 @@
+
 import math
 from Vector import Vector
 class Circle:
@@ -11,7 +12,7 @@ class Circle:
         x = self.center.list[0] + self.r*math.cos(self.theta)
         y = self.center.list[1] + self.r*math.sin(self.theta)
         param = [x, y]
-        return param
+        return Vector(param)
     def getPoints(self, n): # list of vectors
         points = []
         for i in range(n+1):
