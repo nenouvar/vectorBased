@@ -3,7 +3,7 @@ import math
 class Vector:
     def __init__(self, L):
         self.list = L
-        self.n = len(L)
+        self.n = len(self.list)
     
     def add(self, other):
         L = []

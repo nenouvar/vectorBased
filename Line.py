@@ -8,9 +8,11 @@ class Line:
         v = Vector([0, 0])
         v1 = v.add(self.vectors[0])
         v2 = self.vectors[1].multiply(self.t)
-        return v1.add(v2)
+        v3 = v1.add(v2)
+        return Vector(v3.list)
     def getPoints(self, n): # list of vectors
         points = []
         for i in range(-n, n, 1):
-            points.append(Line(self.vectors, i))
+            self = Line(self.vectors, i)
+            points.append(self.param())
         return points

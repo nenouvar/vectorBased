@@ -8,11 +8,11 @@ class Circle:
         self.theta = theta
         self.n = len(self.center.list)
     def param(self): # vector-like object
-        param = []
-        x = self.center.list[0] + self.r*math.cos(self.theta)
-        y = self.center.list[1] + self.r*math.sin(self.theta)
-        param = [x, y]
-        return Vector(param)
+        v = Vector([0, 0])
+        x = self.r*math.cos(self.theta)
+        y = self.r*math.sin(self.theta)
+        v1 = v.add(self.center.add(Vector([x, y])))
+        return Vector(v1.list)
     def getPoints(self, n): # list of vectors
         points = []
         for i in range(n+1):

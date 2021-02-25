@@ -13,7 +13,7 @@ class Plane:
         e1 = e0.add(self.v0)
         e2 = e1.add(self.v1.multiply(self.par[0]))
         e3 = e2.add(self.v2.multiply(self.par[1]))
-        return e3
+        return Vector(e3.list)
     def getPoints(self, n): # list of vectors
         points = []
         for i in range(n+1):
