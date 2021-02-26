@@ -12,7 +12,7 @@ class Circle:
         x = self.r*math.cos(self.theta)
         y = self.r*math.sin(self.theta)
         v1 = v.add(self.center.add(Vector([x, y])))
-        return Vector(v1.list)
+        return Vector(v1.list) #  mporeis na kaneis return v1.list wste na alaxei to getpoints se lista
     def getPoints(self, n): # list of vectors
         points = []
         for i in range(n+1):
